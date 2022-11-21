@@ -1,9 +1,10 @@
 # DB-Main for macOS
 A simple Dockerfile to execute [DB-Main](https://www.db-main.eu) on macOS, M1 or Intel
 
-**DISCLAIMER:** The project was realised for personal purposes and later made public in order to distribute it more easily with my fellow students.
+**DISCLAIMER:** The project was developed for personal purposes and later made public in order to distribute it more easily with my fellow students.
 
 ## Installation
+> **Important:** By installing the software you accept its [Terms and Conditions](https://www.db-main.eu/getit/). DB-Main was developed by the University of Namur, for more information visit the [project webpage](https://www.db-main.eu).
 1. [Install Docker](https://docs.docker.com/desktop/install/mac-install/)
 2. Download this repository (git clone or download zip) and, if necessary, extract it (simply open it)
 	![Download code](images/image0.png)
