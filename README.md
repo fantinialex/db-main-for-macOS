@@ -36,15 +36,15 @@ A simple Dockerfile to execute [DB-Main](https://www.db-main.eu) on macOS, M1 or
 1. Start Docker (open the app)
 2. Go to *Containers* and, if not running, start the container
 	![Container list](images/image3.png)
-3. Click on the container's name and go to *CLI*
-4. Type ```./startVNC.sh```, type the password that you prefer twice and then the character *n*
-	![CLI commands](images/image4.png)
+3. Click on the container's name and go to *Terminal*
+4. Type ```./startVNC.sh```, type the password that you prefer twice and then the character ```n```
+	![Terminal commands](images/image4.png)
 5. Open *Screen Sharing* on your Mac (cmd+space > Screen Sharing)
 6. Type ```localhost:3000```, click *Connect*, type the password that you chose in point 4 and click *Sign In*
 	![Screen Sharing](images/image5.png)
 	![VNC password](images/image6.png)
 7. You can put full screen the new window and... that's it
-	On the Desktop you have the folder *Execises* and the file *db-main.sh*, right click on it and *Execute*!
+	On the Desktop you have the folder *Exercises* and the file *db-main.sh*, right click on it and *Execute*!
 	![Desktop](images/image7.png)
 	During execution, you must keep Docker open
 

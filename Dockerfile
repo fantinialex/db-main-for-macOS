@@ -22,8 +22,6 @@ RUN chmod +x startVNC.sh
 
 RUN apt-get purge --auto-remove xfce4-power-manager -y
 USER user
-RUN mkdir /home/user/.vnc
-RUN echo paswd | vncpasswd -f > /home/user/.vnc/passwd
 
 VOLUME /home/user/Desktop/Exercises
 EXPOSE 5901
