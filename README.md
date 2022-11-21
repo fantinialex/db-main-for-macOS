@@ -26,9 +26,9 @@ A simple Dockerfile to execute [DB-Main](https://www.db-main.eu) on macOS, M1 or
 		![Docker Desktop window](images/image1.png)
 		2. In the pop-up, open *Optional settings* and write the following information
 			- Container name: DB-Main
-			- Port > Host port: 3000
+			- Port > Host port: ```3000```
 			- Volumes > Host path: the folder you prefer to easily transfer files (the three dots open a Finder windows to easily select the folder)
-			- Volumes > Container path: /home/user/Desktop/Exercises
+			- Volumes > Container path: ```/home/user/Desktop/Exercises```
 			![Container configurations](images/image2.png)
 		3. Click *Run*
 5. If you  want, you can delete the folder downloaded in point 2
@@ -45,13 +45,15 @@ A simple Dockerfile to execute [DB-Main](https://www.db-main.eu) on macOS, M1 or
 	![Screen Sharing](images/image5.png)
 	![VNC password](images/image6.png)
 7. You can put full screen the new window and... that's it
-	On the Desktop you have the folder *Exercises* and the file *db-main.sh*, right click on it and *Execute*!
+	On the Desktop you have the folder *Exercises* and the file *db-main.sh*, double click on it to start DB-Main!
 	![Desktop](images/image7.png)
 	During execution, you must keep Docker open
 
 ## Stop
 1. Close the programme from the X in the top right-hand corner
-2. Close Screen Sharing
+2. From Desktop, double click on *stopVNC.sh*
+	![Stop VNC](images/image8.png)
+2. Close Screen Sharing (it's normal to see *Reconnecting...*)
 3. Go to Docker and click *Stop*
-	![Stop container](images/image8.png)
+	![Stop container](images/image9.png)
 4. To completely stop Docker, go to the Menu Bar (where there is the Apple logo), click *Docker Desktop* and then *Quit Docker Desktop*

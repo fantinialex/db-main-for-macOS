@@ -32,6 +32,8 @@ COPY db-main.sh .
 RUN chmod +x db-main.sh
 COPY startVNC.sh .
 RUN chmod +x startVNC.sh
+COPY stopVNC.sh .
+RUN chmod +x stopVNC.sh
 
 USER user
 #to avoid first run error
