@@ -37,8 +37,8 @@ RUN chmod +x stopVNC.sh
 
 USER user
 #to avoid first run error
-RUN mkdir /home/user/.db_main
-RUN touch /home/user/.db_main/db_main.ini
+RUN mkdir /home/user/.db-main
+RUN touch /home/user/.db-main/db_main.ini
 
 VOLUME /home/user/Desktop/Exercises
 EXPOSE 5901
