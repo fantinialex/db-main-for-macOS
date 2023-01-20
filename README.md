@@ -21,48 +21,41 @@ A simple Dockerfile to execute [DB-Main](https://www.db-main.eu) on macOS, M1 or
 	docker buildx build --platform linux/amd64 -t db-main .
 	```
 4. Create the container
-	* via Terminal
-		```
-		docker create -t --name DB-Main --platform linux/amd64 -p 3000:5901 -v ~/Desktop/Exercises:/home/user/Desktop/Exercises db-main
-		```
-		Instead of ```~/Desktop/Exercises``` put the directory that you want to mount into container to easily transfer files (for more information read the [FAQ](#faq) no. 1)
-	* via GUI
-		1. Open Docker Dashboard, go to *Images* tab and click *Run* next to "db-main"
-		![Docker Desktop window](images/image1.png)
-		2. In the pop-up, open *Optional settings* and write the following information
-			- Container name: DB-Main
-			- Port > Host port: ```3000```
-			- Volumes > Host path: the folder you prefer to easily transfer files (for more information read the [FAQ](#faq) no. 1)
-				> The three dots open a Finder windows to easily select the folder
-			- Volumes > Container path: ```/home/user/Desktop/Exercises```
-			![Container configurations](images/image2.png)
-		3. Click *Run*
+	```
+	docker create -t --name DB-Main --platform linux/amd64 -p 3000:5901 -v ~/Desktop/Exercises:/home/user/Desktop/Exercises -e SCREEN_RESOLUTION=1920x1080 db-main
+	```
+	Available options:
+	* ```~/Desktop/Exercises``` replace with the directory that you want to mount into container to easily transfer files (for more information read the [FAQ](#faq) no. 1)
+		> Don't know how to write the path name of the folder? (choose one of the following options)
+		> * Right click on the chosen folder and, while pressing Alt, select *Copy "[folder name]" as Pathname*
+		> * Delete ```~/Desktop/Exercises``` from the command, place the cursor before ```:``` and drag the folder of your choice to the terminal
+	* ```1920x1080``` replace with the resolution you prefer, it will be the resolution of the window
 5. If you  want, you can delete the folder downloaded in point 2
 
 ## Start
 1. Start Docker (open the app)
 2. Go to *Containers* and, if not running, start the container
-	![Container list](images/image3.png)
+	![Container list](images/containerList.png)
 3. Click on the container's name and go to *Terminal*
 4. Type ```./startVNC.sh```, type the password that you prefer twice and then the character ```n```
-	![Terminal commands](images/image4.png)
+	![Terminal commands](images/terminalCommands.png)
 5. Open *Screen Sharing* on your Mac (cmd+space > Screen Sharing)
 	> If you cannot find the application visit ```vnc://localhost:3000``` from browser, this will automatically open the connection... make a note of the name of the app for future reuse
 6. Type ```localhost:3000```, click *Connect*, type the password that you chose in point 4 and click *Sign In*
-	![Screen Sharing](images/image5.png)
-	![VNC password](images/image6.png)
+	![Screen Sharing](images/screenSharing.png)
+	![VNC password](images/vncPassword.png)
 7. You can put full screen the new window and... that's it
 	On the Desktop you have the folder *Exercises* and the file *db-main.sh*, double click on it to start DB-Main!
-	![Desktop](images/image7.png)
+	![Desktop](images/desktop.png)
 	During execution, you must keep Docker open
 
 ## Stop
 1. Close the programme from the X in the top right-hand corner
 2. From Desktop, double click on *stopVNC.sh*
-	![Stop VNC](images/image8.png)
+	![Stop VNC](images/stopVNC.png)
 2. Close Screen Sharing (it's normal to see *Reconnecting...*)
 3. Go to Docker and click *Stop*
-	![Stop container](images/image9.png)
+	![Stop container](images/stopContainer.png)
 4. To completely stop Docker, go to the Menu Bar (where there is the Apple logo), click *Docker Desktop* and then *Quit Docker Desktop*
 
 ## FAQ

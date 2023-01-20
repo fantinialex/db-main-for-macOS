@@ -1,2 +1,2 @@
 export USER=user
-vncserver :1 -geometry 1920x1080
+vncserver :1 -geometry $SCREEN_RESOLUTION

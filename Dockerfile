@@ -40,5 +40,6 @@ USER user
 RUN mkdir /home/user/.db-main
 RUN touch /home/user/.db-main/db_main.ini
 
+ENV SCREEN_RESOLUTION=1920x1080
 VOLUME /home/user/Desktop/Exercises
 EXPOSE 5901
