@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 #install dependencies
 ##update
